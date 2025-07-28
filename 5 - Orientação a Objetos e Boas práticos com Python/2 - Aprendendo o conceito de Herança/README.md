@@ -49,9 +49,10 @@ Agora, veremos na prática um exemplo de herança simples com Python.
 #### Diagrama de classes
 Vamos utilizar este diagrama como base para nosso exemplo.
 - Veiculo: É a classe-pai do exemplo. Todos os atributos/métodos descritos nela, serão aplicados para as classes filha
-- Carro: É classe-filha de `Veiculo`. Repare que quando uma classe x herda comportamentos de outra classe y, podemos dizer que `x` É `y`. Ou seja, no nosso exemplo, `Carro` É um `Veiculo`  
--  Moto:
--  Caminhão:
+- Carro: É classe-filha de `Veiculo`. Contém os atributos que são compatíveis aos carros
+  - Repare que quando uma classe x herda comportamentos de outra classe y, podemos dizer que `x` É `y`. Ou seja, no nosso exemplo, `Carro` É um `Veiculo`  
+-  Moto: É classe-filha de `Veiculo`. Contém os atributos que são compatíveis aos carros
+-  Caminhão: É classe-filha de `Veiculo`. Contém os atributos que são compatíveis aos caminhões
 ```mermaid
 classDiagram
     Veiculo <|-- Carro
@@ -180,7 +181,7 @@ Abaixo, uma implementação de herança múltipla em Python. Iremos usar como ex
   - Para ficar mais simples de entender: A medida que a hierarquia desce no diagrama, mais específico os atributos serão. 
 - Ave: Representa uma subclasse que herda de Animal. Essa classe vai representar os grupos de animais (objetos concretos) que são aves
 - Classes concretas: As demais classes abaixo serão os próprios animais
-  - Cachorro, Gato e Leão: São objetos que herdam de `Mamifero` (e por conta da herança transitiva, também herdam de `Animal`)
+  - Cachorro, Gato e Canguru: São objetos que herdam de `Mamifero` (e por conta da herança transitiva, também herdam de `Animal`)
   - Aguia: Objeto que herda de `Ave` (e por conta da herança transitiva, também herdam de `Animal`)
   - Ornitorrinco: Este é um caso interessante, pois o ornitorrinco é um animal considerado ave, mamífero e réptil (sim, os 3 grupos ao mesmo tempo). Não temos a representação de répteis no nosso diagraa para que não fique muito grande, mas nesse caso `Ornitorrinco` herda de `Mamifero` E `Ave` ao mesmo tempo
 
@@ -191,7 +192,7 @@ classDiagram
     Animal <|-- Ave
     Mamifero <|-- Cachorro
     Mamifero <|-- Gato
-    Mamifero <|-- Leao
+    Mamifero <|-- Canguru
     Mamifero <|-- Ornitorrinco
     Ave <|-- Ornitorrinco
     Ave <|-- Aguia
@@ -242,7 +243,7 @@ class Aguia(Ave):
     def cacar(self):
         print("Caçando presa...")
 
-# Ornitorrindo é Mamífero e Ave ao mesmo tempo
+# Ornitorrinco é Mamífero e Ave ao mesmo tempo
 class Ornitorrinco(Mamifero, Ave):
     def botar_ovo(self):
         print("Botando ovo...")
