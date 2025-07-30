@@ -1,4 +1,4 @@
-# Desafio de codigo - Sistema de Gestão de Veículos
+Int# Desafio de codigo - Sistema de Gestão de Veículos
 
 ## Descrição
 Implemente uma classe Veiculo que represente um carro com marca, modelo e ano. Crie um método que verifique se o carro é considerado antigo (mais de 20 anos).
@@ -16,9 +16,9 @@ A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectiva
 
 |Entrada|Saida|
 |-------|-----|
-|Toyota/Corolla/2000|
-|Honda/Civic/2005|
-|Ford/Fiesta/1999|
+|Toyota/Corolla/2000|Veiculo antigo|
+|Honda/Civic/2005| Veiculo novo|
+|Ford/Fiesta/1999| Veiculo antigo|
 
 <br>
 
@@ -35,7 +35,7 @@ Crie uma classe Pedido que represente um pedido em um restaurante, contendo os i
 - Lista de itens e seus respectivos preços.
 
 ## Saida
-O valor total da conta.
+- O valor total da conta.
 
 ## Exemplos
 A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.

@@ -92,11 +92,14 @@ Com o `property()` do Python, você pode criar atributos gerenciados em suas cla
 
 >Em outras palavras: você mantém a mesma "interface" para o usuário da classe, mas pode inserir lógica personalizada por trás dos bastidores.
 
+Em Python, `@property` permite que você acesse métodos como se fossem atributos (sem usar parênteses), com a vantagem de poder controlar leitura, escrita e deleção com lógica customizada.
+
 #### Por que usar @property?
 Use propriedades quando você:
 - Quer proteger um atributo (evitar acesso direto sem controle)
 - Precisa alterar a forma como um atributo é calculado ou armazenado
 - Deseja manter a compatibilidade da sua API pública mesmo com mudanças internas
+- Quando você quer que algo pareça um atributo, mas por trás tenha uma lógica de acesso ou validação.
 
 
 >Imagine que você possui uma variável nome, mas agora deseja que esse atributo retorne o nome completo, juntando nome e sobrenome. Com o @property, você pode fazer isso de forma automática:
