@@ -1,0 +1,4 @@
+[04/08/2025 18:46:49] Função 'criar_conta' executada com argumentos (1, [<PessoaFisica: (1)>], [<ContaCorrente: ('0001', '1', 'te')>]) e {}. Retornou None
+[04/08/2025 18:46:56] Função 'depositar' executada com argumentos ([<PessoaFisica: (1)>],) e {}. Retornou None
+[04/08/2025 18:47:07] Função 'depositar' executada com argumentos ([<PessoaFisica: (1)>],) e {}. Retornou None
+[04/08/2025 18:47:13] Função 'sacar' executada com argumentos ([<PessoaFisica: (1)>],) e {}. Retornou None
